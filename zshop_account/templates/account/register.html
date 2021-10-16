@@ -1,0 +1,49 @@
+ {% extends 'shared/_MainLayout.html' %}{% load static %} {% block content %}
+
+<div class="container">
+    <section id="form">
+        <!--form-->
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-1">
+                <div class="signup-form">
+                    <!--sign up form-->
+                    <h2>ثبت نام کاربـر جدیـد</h2>
+                    <form method="post">
+                        {% csrf_token %}
+
+                        <label for="{{ register_form.user_name.id_for_label }}">{{ register_form.user_name.label }}</label> {{ register_form.user_name }} {% for error in register_form.user_name.errors %}
+                        <p style="color: red;">{{ error }}</p>
+                        {% endfor %}
+
+                        <label for="{{ register_form.email.id_for_label }}">{{ register_form.email.label }}</label> {{ register_form.email }} {% for error in register_form.email.errors %}
+                        <p style="color: red;">{{ error }}</p>
+                        {% endfor %}
+
+                        <label for="{{ register_form.password.id_for_label }}">{{ register_form.password.label }}</label> {{ register_form.password }} {% for error in register_form.password.errors %}
+                        <p style="color: red;">{{ error }}</p>
+                        {% endfor %}
+
+                        <label for="{{ register_form.re_password.id_for_label }}">{{ register_form.re_password.label }}</label> {{ register_form.re_password }} {% for error in register_form.re_password.errors %}
+                        <p style="color: red;">{{ error }}</p>
+                        {% endfor %}
+
+                        <div class="pull-right" style="direction: rtl;">
+                            <span>
+								<a href="login">حساب موجود دارید؟ورود</a>
+							</span><br>
+                        </div>
+                        <button type="submit" class="btn btn-default">ثبت نام</button>
+                    </form>
+
+                </div>
+                <!--/sign up form-->
+
+            </div>
+            <img class="regav" src="{% static 'images/home/loginava.png' %}" width=500 height=450 padding-right=200 lt="">
+        </div>
+    </section>
+</div>
+<!--/form-->
+
+
+{% endblock %}

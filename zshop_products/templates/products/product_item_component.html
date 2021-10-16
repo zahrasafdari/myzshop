@@ -1,0 +1,39 @@
+<div class="col-sm-4 pull-right">
+    <div class="product-image-wrapper">
+        <div class="single-products">
+            <div class="productinfo text-center">
+                {% if product.image %}
+                <img src="{{ product.image.url }}" height='250' lt=" "> {% endif %}
+                <h2>{{ product.price }} تومان</h2>
+                <p>{{ product.title }}</p>
+                <a href="# " class="btn btn-default add-to-cart "><i
+                        class="fa fa-shopping-cart "></i>افزودن به سبـد خریـد</a>
+            </div>
+            <div class="product-overlay ">
+                <div class="overlay-content ">
+                    <h2>{{ product.price }} تومان</h2>
+                    <p>{{ product.title }}</p>
+                    <a href="# " class="btn btn-default add-to-cart "><i
+                            class="fa fa-shopping-cart "></i>افزودن به سبـد خریـد</a>
+                </div>
+            </div>
+        </div>
+        <form method="post" action="/add-favorite-product">
+            {% csrf_token %} {{ favorite_form.product_id }}
+
+            <button type="submit" class="btn btn-fefault cart">
+                <i class="fa fa-shopping-cart"></i>
+                مقایسه
+            </button>
+        </form>
+        <div class="choose ">
+            <ul class="nav nav-pills nav-justified ">
+                <li><a href="{{ product.get_absolute_url }} "><i
+                        class="fa fa-plus-square "></i>مشاهده</a></li>
+
+                <li>
+                    {% comment %} <a href='{% url "zshop_favorites:favorite"  id=favorite_product.id %}'><i class=" fa fa-plus-square "></i>افزودن به لیست علاقمندی</a>{% endcomment %}</li>
+            </ul>
+        </div>
+    </div>
+</div>

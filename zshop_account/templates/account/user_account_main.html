@@ -1,0 +1,25 @@
+{% extends 'shared/_MainLayout.html' %} {% load render_partial %} {% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="contact-form">
+                <div class="status alert alert-success" style="display: none"></div>
+
+                <div class="col-md-12">
+                    <p class="text-danger">نام کاربری: {{user}}</p>
+                </div>
+                <div class="col-md-12">
+                    <p class="text-danger">نام و نام خانوادگی:{{user.first_name}} {{user.last_name}}</p>
+                </div>
+
+                <div class="col-md-12">
+                    <p class="text-danger">ایمیل:{{user.email}}</p>
+                </div>
+            </div>
+        </div>
+        {% render_partial 'zshop_account.views.user_sidebar' %}
+    </div>
+</div>
+
+{% endblock %}
