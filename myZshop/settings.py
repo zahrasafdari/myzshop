@@ -90,8 +90,12 @@ WSGI_APPLICATION = 'myZshop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(os.path.join(BASE_DIR, "db.sqlite3")),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'myzshop',
+        'USER': 'postgres',
+        'PASSWORD': '13811',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 

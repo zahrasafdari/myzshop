@@ -67,6 +67,7 @@ def product_detail(request, *args, **kwargs):
             message = comment_form.cleaned_data.get('message')
             new_comment=Comment.objects.create(product=product ,name=name, email=email,message=message)
             new_comment.save()
+            comment_form=CreateCommentForm(None)
             # todo : show user a success message
         
 

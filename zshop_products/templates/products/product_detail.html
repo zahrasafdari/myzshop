@@ -240,8 +240,8 @@
                                 <ul>
                                     <ul>
                                         <li><a href=""><i class="fa fa-user"></i>{{cm.name}}</a></li>
-                                        <li><a href=""><i class="fa fa-clock-o">4</i></a></li>
-                                        <li><a href=""><i class="fa fa-calendar-o"></i>{{cm.date}}</a></li>
+                                        <li><a href=""><i class="fa fa-clock-o">{{cm.date.hour}} : {{cm.date.minute}} : {{cm.date.second}}</i></a></li>
+                                        <li><a href=""><i class="fa fa-calendar-o"></i>{{cm.date.year}} . {{cm.date.day}} . {{cm.date.month}}</a></li>
                                     </ul>
                                 </ul>
                                 <p>{{ cm.message}}</p>
