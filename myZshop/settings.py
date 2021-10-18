@@ -93,7 +93,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'myzshop',
         'USER': 'postgres',
-        'PASSWORD': '13811',
+        'PASSWORD': '',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
@@ -160,4 +160,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'myzshop1400@gmail.com'
-EMAIL_HOST_PASSWORD ='cs99python'
+EMAIL_HOST_PASSWORD =''
