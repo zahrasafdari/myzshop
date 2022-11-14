@@ -14,3 +14,4 @@ def favorite_add(request, fav_id):
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
 
+vmess://eyJhZGQiOiI2NS4yMS4yOC4xODAiLCJhaWQiOiIwIiwiaG9zdCI6IiIsImlkIjoiMDczM2E2ZmUtM2ZkZC0xMWVkLWI4NzgtMDI0MmFjMTIwMDAyIiwibmV0Ijoid3MiLCJwYXRoIjoiL2dyYXBocWwiLCJwb3J0IjoiODAiLCJwcyI6InhveG8yIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
